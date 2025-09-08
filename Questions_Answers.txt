@@ -1,0 +1,102 @@
+Question: What plans are available?
+Answer: Basic ($19/mo), Pro ($49/mo), and Business ($149/mo). Basic includes 3 agents and 5,000 messages/mo; Pro includes 10 agents and 50,000 messages/mo; Business includes 50 agents, unlimited widgets, and 500,000 messages/mo.
+
+Question: Do you offer a free trial?
+Answer: Yes, a 14-day free trial with Pro features. No credit card required.
+
+Question: Can I pay annually at a discount?
+Answer: Yes. Annual billing gives two months free: Basic $190/yr, Pro $490/yr, Business $1,490/yr.
+
+Question: How do I upgrade or downgrade my plan?
+Answer: Go to Settings → Billing and choose a new plan. Changes are prorated on the next invoice.
+
+Question: What payment methods do you accept?
+Answer: Visa, Mastercard, and American Express. Wire transfers are available for Business plan customers.
+
+Question: What is your refund policy?
+Answer: Monthly plans can be canceled anytime (no partial refunds). Annual plans have a 30-day money-back guarantee. Duplicate charges are fully refundable within 7 days.
+
+Question: I can’t log in—what should I try first?
+Answer: 1) Reset your password, 2) open magic link within 10 minutes, 3) try an incognito window or clear cache, 4) check status page, 5) if using SSO, verify your company domain.
+
+Question: Do you support Single Sign-On (SSO)?
+Answer: Yes. SAML 2.0 and OIDC on Pro and Business. Configure in Settings → Security → SSO (Okta, Azure AD, Google).
+
+Question: How do I add teammates?
+Answer: Go to Settings → Team → Invite. Available roles are Admin, Agent, and Viewer.
+
+Question: How do I change my email or password?
+Answer: Open Profile → Account. Email changes require confirmation. Passwords must be 12+ characters; 2FA is available.
+
+Question: Can I restrict access by IP?
+Answer: Yes, Business plan supports IP allow-listing (CIDR) in Settings → Security → Network.
+
+Question: How do I delete my workspace and export data?
+Answer: The Owner can delete a workspace in Settings → General. Export data first; deletion permanently removes data within 7 days.
+
+Question: What does this product do?
+Answer: SupportPilot provides a unified inbox (email + chat), a knowledge base, automation rules, analytics, and a customer portal.
+
+Question: Which integrations are available?
+Answer: Slack, Gmail, Outlook, Shopify, Stripe, Zapier, and Webhooks. A REST API is available for custom integrations.
+
+Question: Do you have an API and what is the rate limit?
+Answer: Yes, REST /v1 with API keys from Settings → Developers. Default rate limit is 600 requests per minute per workspace.
+
+Question: Can I migrate from Zendesk or Freshdesk?
+Answer: Yes. Use our CSV importer or API migrator. Assisted migration is available—contact support to schedule.
+
+Question: Do you support multiple brands?
+Answer: Yes. Pro and Business plans support multiple brands with separate inboxes, KBs, and chat widgets.
+
+Question: Are there mobile apps?
+Answer: Yes. iOS and Android apps with push notifications for agents.
+
+Question: How is my data protected?
+Answer: Data is encrypted in transit (TLS 1.2+) and at rest (AES-256). Daily backups are kept for 30 days (Business: 90 days).
+
+Question: Are you GDPR and SOC 2 compliant?
+Answer: Yes. We are GDPR compliant and SOC 2 Type II audited annually. A DPA is available upon request.
+
+Question: Do you offer data residency options?
+Answer: Default region is US-East. Business customers can request EU (Frankfurt) data residency.
+
+Question: Can I export tickets and knowledge base content?
+Answer: Yes. Tickets (CSV/JSON), KB (Markdown), and users (CSV) via UI or API.
+
+Question: Incoming support emails aren’t creating tickets—what should I check?
+Answer: Verify email forwarding/piping, SPF/DKIM status, blocked sender domain, and mailbox mapping. Check logs in Settings → Channels → Email.
+
+Question: Why is the live chat widget offline on my site?
+Answer: Ensure the embed code is present, the domain is allow-listed, business hours aren’t set to Offline, and ad blockers aren’t hiding the widget. Check the status page.
+
+Question: How do automation rules work?
+Answer: Create IF/THEN rules (e.g., “If subject contains ‘refund’ → add Tag: Billing → assign Team: Billing → send canned reply”). Rules run in order and can stop after a match.
+
+Question: What are message limits and overage fees?
+Answer: Basic 5k, Pro 50k, Business 500k messages/month. Overages are $0.002 per message. At 120% of quota, non-critical automations pause until reset or upgrade.
+
+Question: What are your support hours and SLAs?
+Answer: Standard: Mon–Fri, 9am–5pm ET (email within 1 business day). Pro: priority within 8 hours. Business: 24/7 critical with 2-hour first response.
+
+Question: How can I contact support?
+Answer: Use in-app chat, the Help → Contact Support form, or email support@example.com
+. Include your workspace ID and the issue timestamp.
+
+Question: How do I update my payment method or download invoices?
+Answer: Go to Settings → Billing to add or update cards and download invoices as PDF.
+
+Question: Can I consolidate billing across multiple workspaces?
+Answer: Yes. Pro and Business can consolidate billing—contact support to enable.
+
+Question: Do you provide onboarding help?
+Answer: Yes. Pro includes a 60-minute group session; Business includes a success manager and a tailored rollout plan.
+
+Question: Can I import my existing knowledge base content?
+Answer: Yes. Upload Markdown/HTML files or connect a public site for crawl-and-index.
+
+Question: What is your data retention policy?
+Answer: Active workspaces retain all tickets. Deleted workspaces are purged within 7 days. Backups follow the retention windows listed above.
+
+Question: Do you sign a BAA for HIPAA?
+Answer: Available on Business with additional safeguards. Contact sales for details.
