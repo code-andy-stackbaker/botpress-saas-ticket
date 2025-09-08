@@ -1,0 +1,41 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: botpress-staging
+      cancel-in-progress: true
+    env:
+      STAGING_BOT_ID: ${{ secrets.STAGING_BOT_ID }}
+      WORKSPACE_ID: ${{ secrets.WORKSPACE_ID }}
+      BOTPRESS_PAT: ${{ secrets.BOTPRESS_PAT }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install project deps (repo root)
+        run: npm ci
+
+      - name: Install Botpress CLI
+        run: npm install -g @botpress/cli
+
+      - name: Botpress login (non-interactive)
+        run: bp login --workspaceId "$WORKSPACE_ID" --token "$BOTPRESS_PAT"
+
+      - name: Deploy to Botpress (Staging)
+        run: bp deploy --bot-id "$STAGING_BOT_ID"
